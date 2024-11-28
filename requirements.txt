@@ -1,0 +1,7 @@
+click
+pandas
+pyyaml
+loguru
+rich
+openpyxl
+xlsxwriter

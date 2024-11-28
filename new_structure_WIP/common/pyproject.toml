@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "crossplane-utils-common"
+version = "0.1.0"
+description = "Common utilities for Crossplane tools"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{include = "crossplane_utils_common", from = "src"}]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyyaml = "^6.0"
+loguru = "^0.7.0"
+rich = "^13.0.0"
+click = "^8.1.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+strict = true

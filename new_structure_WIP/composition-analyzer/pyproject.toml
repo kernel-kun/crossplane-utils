@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "crossplane-composition-analyzer"
+version = "0.1.0"
+description = "Crossplane composition analysis tools"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{include = "crossplane_composition_analyzer", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+crossplane-utils-common = {path = "../../common", develop = true}
+click = "^8.1.3"
+pandas = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+analyze-composition = "crossplane_composition_analyzer.cli:main"
